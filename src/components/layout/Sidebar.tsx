@@ -10,8 +10,11 @@ import {
   X,
   ChevronRight,
   ChevronLeft,
+  LogOut,
+  User,
 } from 'lucide-react';
 import { useSettings } from '../../hooks/useSettings';
+import { useAuth } from '../../context/AuthContext';
 
 interface SidebarProps {
   isOpen: boolean; // For mobile off-canvas drawer
@@ -27,6 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onToggleCollapse,
 }) => {
   const { pharmacyName, wapilot } = useSettings();
+  const { user, logout } = useAuth();
 
   const navItems = [
     {
@@ -231,6 +235,44 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 إعدادات الربط البرمجي
                 <ExternalLink className="w-3 h-3" />
               </NavLink>
+            </div>
+          )}
+        </div>
+
+        {/* User Info & Logout */}
+        <div className={`p-2.5 border-t border-slate-100 ${isCollapsed ? 'text-center' : ''}`}>
+          {isCollapsed ? (
+            <button
+              type="button"
+              onClick={logout}
+              className="p-2 rounded-xl text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors mx-auto flex items-center justify-center"
+              title="تسجيل الخروج من المنظومة"
+            >
+              <LogOut className="w-4 h-4" />
+            </button>
+          ) : (
+            <div className="flex items-center justify-between p-2 rounded-xl bg-slate-50 border border-slate-200/60">
+              <div className="flex items-center gap-2 min-w-0">
+                <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-brand-600 font-bold shrink-0 text-xs">
+                  <User className="w-4 h-4 text-brand-600" />
+                </div>
+                <div className="min-w-0 text-start">
+                  <span className="text-xs font-bold text-slate-800 block truncate">
+                    {user?.displayName || 'جميل'}
+                  </span>
+                  <span className="text-[10px] text-slate-400 block truncate">
+                    {user?.username || 'Gamil_122'}
+                  </span>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={logout}
+                className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0"
+                title="تسجيل الخروج"
+              >
+                <LogOut className="w-4 h-4" />
+              </button>
             </div>
           )}
         </div>

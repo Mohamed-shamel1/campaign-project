@@ -6,9 +6,12 @@ import {
   ShieldCheck,
   PanelRightClose,
   PanelRightOpen,
+  LogOut,
+  User,
 } from 'lucide-react';
 import { Button } from '../common/Button';
 import { useSettings } from '../../hooks/useSettings';
+import { useAuth } from '../../context/AuthContext';
 
 interface HeaderProps {
   onOpenSidebar: () => void;
@@ -23,6 +26,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const location = useLocation();
   const { pharmacyName } = useSettings();
+  const { user, logout } = useAuth();
 
   const getPageTitle = () => {
     switch (location.pathname) {
@@ -126,6 +130,24 @@ export const Header: React.FC<HeaderProps> = ({
             </Button>
           </Link>
         )}
+
+        {/* User Pill & Logout Button */}
+        <div className="flex items-center gap-1.5 border-s border-slate-200 ps-2 sm:ps-3">
+          <div className="hidden xl:flex items-center gap-1.5 text-xs text-slate-600 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200">
+            <User className="w-3.5 h-3.5 text-brand-600" />
+            <span className="font-semibold">{user?.displayName || 'جميل'}</span>
+          </div>
+
+          <button
+            type="button"
+            onClick={logout}
+            className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg text-slate-500 hover:text-rose-600 hover:bg-rose-50 border border-slate-200 transition-colors flex items-center gap-1 text-xs font-semibold"
+            title="تسجيل الخروج من المنظومة"
+          >
+            <LogOut className="w-4 h-4" />
+            <span className="hidden sm:inline">خروج</span>
+          </button>
+        </div>
       </div>
     </header>
   );
