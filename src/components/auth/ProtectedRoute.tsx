@@ -12,3 +12,4 @@ export const ProtectedRoute: React.FC<{ children: React.ReactElement }> = ({ chi
 
   return children;
 };
+
