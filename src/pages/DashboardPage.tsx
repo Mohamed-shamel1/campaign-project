@@ -37,36 +37,60 @@ export const DashboardPage: React.FC = () => {
   return (
     <div className="space-y-8">
       {/* Welcome Banner */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-brand-950 to-brand-800 text-white p-5 sm:p-8 shadow-sm">
-        <div className="relative z-10 max-w-2xl space-y-2.5">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-rose-200 border border-white/15">
-            <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-            <span>صيدليات الفؤاد | AL Fouad Pharmacies - قسم العناية والتجميل</span>
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-fouad-dark via-slate-900 to-brand-900 text-white p-5 sm:p-8 shadow-card border border-slate-800">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+          <div className="max-w-2xl space-y-3">
+            {/* Pill Tag with Logo */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs text-rose-100 font-medium">
+              <div className="h-5 w-8 rounded bg-white p-0.5 flex items-center justify-center shrink-0">
+                <img src="/logo.png" alt="صيدليات الفؤاد" className="h-full w-full object-contain" />
+              </div>
+              <span>صيدليات الفؤاد | AL Fouad PHARMACIES - قسم العناية والتجميل</span>
+            </div>
+
+            <h1 className="text-xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+              منصة إدارة حملات واتساب - صيدليات الفؤاد
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
+              استورد أرقام عملائك من نظام Odoo، ودقق أرقام الهواتف المصرية بنقرة واحدة، وقم بإنشاء رسائل تسويقية احترافية مع معاينة حية للمستلم.
+            </p>
+
+            <div className="pt-2">
+              <Link to="/campaigns/create" className="inline-block w-full sm:w-auto">
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="w-full sm:w-auto bg-brand-600 hover:bg-brand-500 text-white shadow-glow font-bold border-none text-sm px-6 py-2.5"
+                  leftIcon={<Plus className="w-4 h-4" />}
+                >
+                  بدء حملة تسويقية جديدة الآن
+                </Button>
+              </Link>
+            </div>
           </div>
-          <h1 className="text-xl sm:text-3xl font-extrabold tracking-tight">
-            مرحباً بك في منصة حملات واتساب - صيدليات الفؤاد
-          </h1>
-          <p className="text-xs sm:text-sm text-rose-100/85 leading-relaxed">
-            استورد أرقام عملائك من نظام Odoo، ودقق أرقام الهواتف المصرية بنقرة واحدة، وقم بإنشاء رسائل تسويقية احترافية مع معاينة حية للمستلم.
-          </p>
-          <div className="pt-2">
-            <Link to="/campaigns/create" className="inline-block w-full sm:w-auto">
-              <Button
-                variant="white"
-                size="md"
-                className="w-full sm:w-auto text-slate-900 hover:text-brand-700 shadow-md font-bold"
-                leftIcon={<Plus className="w-4 h-4 text-brand-600" />}
-              >
-                بدء حملة تسويقية جديدة الآن
-              </Button>
-            </Link>
+
+          {/* Clean Official Logo Card on Desktop (No inverted watermarks!) */}
+          <div className="hidden lg:flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm shrink-0 shadow-lg">
+            <div className="w-44 h-22 bg-white rounded-xl p-2.5 shadow-md flex items-center justify-center">
+              <img
+                src="/logo.png"
+                alt="شعار صيدليات الفؤاد"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="mt-2 text-center">
+              <span className="text-[11px] font-bold text-white block">
+                صيدليات الفؤاد
+              </span>
+              <span className="text-[10px] text-rose-300 block">
+                البوابة التسويقية المعتمدة
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Decorative background logo watermark */}
-        <div className="absolute -end-8 -bottom-12 w-64 h-64 opacity-10 pointer-events-none hidden sm:flex items-center justify-center">
-          <img src="/logo.png" alt="صيدليات الفؤاد" className="w-full h-full object-contain filter invert" />
-        </div>
+        {/* Subtle background crimson glow */}
+        <div className="absolute top-0 end-1/4 w-96 h-96 rounded-full bg-brand-600/15 blur-3xl pointer-events-none" />
       </div>
 
       {/* WhatsApp Connection Status Banner */}

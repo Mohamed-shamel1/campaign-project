@@ -18,23 +18,25 @@ export default {
         ],
       },
       colors: {
+        // Al Fouad Pharmacies - Signature Medical Crimson & Charcoal Palette
         brand: {
-          50: '#fef2f2',
-          100: '#ffe1e2',
-          200: '#ffc8cb',
+          50: '#fff5f5',
+          100: '#ffe2e4',
+          200: '#ffc9cc',
           300: '#ffa1a6',
-          400: '#fa6871',
-          500: '#f23742',
-          600: '#ec1e28', // Official Al Fouad Pharmacies signature red
-          700: '#c8101a',
-          800: '#a51119',
-          900: '#89131a',
+          400: '#f8666f',
+          500: '#f02d37',
+          600: '#ec1e28', // Official Al Fouad Pharmacies primary crimson red
+          700: '#c7141e',
+          800: '#a1141c',
+          900: '#7f1319',
           950: '#0d1114', // Official Al Fouad charcoal black
         },
         fouad: {
           red: '#ec1e28',
           dark: '#0d1114',
-          gray: '#2b3035',
+          surface: '#151b21',
+          slate: '#242d35',
         },
         whatsapp: {
           light: '#dcf8c6',
@@ -47,6 +49,7 @@ export default {
       boxShadow: {
         'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03)',
         'card': '0 2px 8px -2px rgba(0, 0, 0, 0.05), 0 4px 16px -4px rgba(0, 0, 0, 0.03)',
+        'glow': '0 0 15px -3px rgba(236, 30, 40, 0.25)',
       }
     },
   },
