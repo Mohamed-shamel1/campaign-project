@@ -90,12 +90,12 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         {/* Logo and Title */}
-        <div className="flex items-center gap-2.5 min-w-0">
-          <div className="h-8 w-12 rounded-lg bg-white border border-slate-200/80 p-0.5 hidden sm:flex items-center justify-center shrink-0 shadow-2xs">
+        <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+          <div className="h-7 w-11 sm:h-8 sm:w-12 rounded-lg bg-white border border-slate-200/90 p-0.5 flex items-center justify-center shrink-0 shadow-2xs">
             <img src="/logo.png" alt="صيدليات الفؤاد" className="h-full w-full object-contain" />
           </div>
           <div className="min-w-0">
-            <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight truncate">
+            <h2 className="text-sm sm:text-lg font-bold text-slate-900 tracking-tight truncate">
               {title}
             </h2>
             <p className="text-[11px] sm:text-xs text-slate-500 hidden sm:block truncate mt-0.5">

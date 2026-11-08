@@ -76,8 +76,40 @@ export const DashboardPage: React.FC = () => {
           {/* Right Column: Hero Content & Actions */}
           <div className="max-w-2xl space-y-5">
             
-            {/* Top Badges Row */}
-            <div className="flex flex-wrap items-center gap-2.5">
+            {/* Mobile Brand Identity Showcase (Visible exclusively on mobile < lg) */}
+            <div className="flex items-center justify-between gap-3 pb-3.5 border-b border-white/10 lg:hidden">
+              <div className="flex items-center gap-2.5 min-w-0">
+                {/* Crisp Official Logo Container on Mobile */}
+                <div className="h-10 w-16 bg-white rounded-xl p-1 shadow-md border border-slate-200/90 flex items-center justify-center shrink-0">
+                  <img
+                    src="/logo.png"
+                    alt="شعار صيدليات الفؤاد الرسمي"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1.5">
+                    <span className="relative flex h-2 w-2 shrink-0">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ec1e28] opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ec1e28]"></span>
+                    </span>
+                    <span className="text-xs font-bold text-white truncate">صيدليات الفؤاد</span>
+                  </div>
+                  <span className="text-[10px] font-bold text-[#ec1e28] uppercase tracking-wider block mt-0.5 truncate">
+                    AL FOUAD PHARMACIES
+                  </span>
+                </div>
+              </div>
+
+              {/* Cosmetics Division Tag */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-950/60 border border-red-800/40 text-[10px] text-rose-300 font-medium shrink-0">
+                <Sparkles className="w-3 h-3 text-rose-400" />
+                <span>العناية والتجميل</span>
+              </div>
+            </div>
+
+            {/* Desktop Brand Badges Row (Visible on lg+) */}
+            <div className="hidden lg:flex flex-wrap items-center gap-2.5">
               {/* Official Brand Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.07] backdrop-blur-md border border-white/10 text-xs text-slate-200">
                 <span className="relative flex h-2 w-2">
