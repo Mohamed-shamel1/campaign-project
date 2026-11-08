@@ -100,7 +100,7 @@ export const Step1Info: React.FC<Step1InfoProps> = ({
           <div className="p-3.5 bg-brand-50/50 rounded-xl border border-brand-100 flex items-start gap-3">
             <Tag className="w-4 h-4 text-brand-600 mt-0.5 shrink-0" />
             <div className="text-xs text-brand-900 leading-relaxed">
-              <span className="font-bold">تنويه تسويقي للصيادلة:</span> يمكنك تصدير جهات الاتصال الخاصة بمنتجات التجميل والعناية مباشرة من نظام Odoo بصيغة Excel أو CSV واستيرادها في الخطوة التالية.
+              <span className="font-bold">تنويه تسويقي لصيدليات الفؤاد:</span> يمكنك تصدير جهات الاتصال الخاصة بقسم التجميل والعناية مباشرة من نظام Odoo بصيغة Excel أو CSV واستيرادها في الخطوة التالية.
             </div>
           </div>
         </div>

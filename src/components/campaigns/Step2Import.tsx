@@ -191,14 +191,14 @@ export const Step2Import: React.FC<Step2ImportProps> = ({
     setHeaders(demoHeaders);
     setSelectedPhoneCol('رقم الهاتف');
     setSelectedNameCol('اسم العميل');
-    setCurrentFileName('عملاء_Odoo_أسماء_وأرقام.xlsx');
+    setCurrentFileName('عملاء_صيدليات_الفؤاد_Odoo.xlsx');
     setCurrentFileSize(28672);
 
     const result = processContactRows(
       demoRows,
       'رقم الهاتف',
       'اسم العميل',
-      'عملاء_Odoo_أسماء_وأرقام.xlsx',
+      'عملاء_صيدليات_الفؤاد_Odoo.xlsx',
       28672,
       demoHeaders,
       'عميل'
@@ -226,17 +226,17 @@ export const Step2Import: React.FC<Step2ImportProps> = ({
     setHeaders(demoHeaders);
     setSelectedPhoneCol('رقم الموبايل');
     setSelectedNameCol('');
-    setCurrentFileName('قائمة_أرقام_فقط_بدون_أسماء.xlsx');
+    setCurrentFileName('أرقام_عملاء_صيدليات_الفؤاد_فقط.xlsx');
     setCurrentFileSize(16384);
 
     const result = processContactRows(
       demoRows,
       'رقم الموبايل',
       '',
-      'قائمة_أرقام_فقط_بدون_أسماء.xlsx',
+      'أرقام_عملاء_صيدليات_الفؤاد_فقط.xlsx',
       16384,
       demoHeaders,
-      'عميلة الصيدلية'
+      'عميلة صيدليات الفؤاد'
     );
 
     onImportComplete(result.summary, result.records);
