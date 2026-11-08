@@ -24,28 +24,34 @@ export const StatCard: React.FC<StatCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-white rounded-xl border border-slate-200/80 p-5 shadow-subtle flex flex-col justify-between transition-all hover:border-slate-300 ${className}`}
+      className={`bg-white rounded-xl border border-slate-200/80 p-3.5 sm:p-5 shadow-subtle flex flex-col justify-between transition-all hover:border-slate-300 min-w-0 overflow-hidden ${className}`}
     >
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-sm font-medium text-slate-500">{title}</span>
-        <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${iconBgColor}`}>
+      <div className="flex items-start justify-between gap-2 mb-2 sm:mb-3">
+        <span className="text-xs sm:text-sm font-medium text-slate-500 truncate" title={title}>
+          {title}
+        </span>
+        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center shrink-0 ${iconBgColor}`}>
           {icon}
         </div>
       </div>
-      <div>
-        <div className="text-2xl font-bold text-slate-900 tracking-tight">{value}</div>
+      <div className="min-w-0">
+        <div className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">{value}</div>
         {(subtext || trend) && (
-          <div className="flex items-center gap-2 mt-1.5 text-xs text-slate-500">
+          <div className="flex items-center gap-1.5 sm:gap-2 mt-1 sm:mt-1.5 text-[11px] sm:text-xs text-slate-500 min-w-0">
             {trend && (
               <span
-                className={`font-medium ${
+                className={`font-medium shrink-0 ${
                   trend.isPositive ? 'text-emerald-600' : 'text-slate-600'
                 }`}
               >
                 {trend.text}
               </span>
             )}
-            {subtext && <span>{subtext}</span>}
+            {subtext && (
+              <span className="truncate block" title={subtext}>
+                {subtext}
+              </span>
+            )}
           </div>
         )}
       </div>

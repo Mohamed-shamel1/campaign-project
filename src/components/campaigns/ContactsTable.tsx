@@ -66,15 +66,15 @@ export const ContactsTable: React.FC<ContactsTableProps> = ({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 min-w-0 max-w-full">
       {/* Filter Tabs & Search Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 min-w-0">
         {/* Filter Pills */}
-        <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl overflow-x-auto text-xs">
+        <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl overflow-x-auto text-xs max-w-full shrink-0">
           <button
             type="button"
             onClick={() => setActiveTab('all')}
-            className={`px-3 py-1.5 rounded-lg font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-lg font-medium transition-colors shrink-0 ${
               activeTab === 'all'
                 ? 'bg-white text-slate-900 shadow-xs'
                 : 'text-slate-600 hover:text-slate-900'
@@ -85,7 +85,7 @@ export const ContactsTable: React.FC<ContactsTableProps> = ({
           <button
             type="button"
             onClick={() => setActiveTab('valid')}
-            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1.5 shrink-0 ${
               activeTab === 'valid'
                 ? 'bg-white text-emerald-800 shadow-xs'
                 : 'text-emerald-700 hover:text-emerald-900'
@@ -97,7 +97,7 @@ export const ContactsTable: React.FC<ContactsTableProps> = ({
           <button
             type="button"
             onClick={() => setActiveTab('invalid')}
-            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1.5 shrink-0 ${
               activeTab === 'invalid'
                 ? 'bg-white text-rose-800 shadow-xs'
                 : 'text-rose-700 hover:text-rose-900'
@@ -109,7 +109,7 @@ export const ContactsTable: React.FC<ContactsTableProps> = ({
           <button
             type="button"
             onClick={() => setActiveTab('duplicate')}
-            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1.5 shrink-0 ${
               activeTab === 'duplicate'
                 ? 'bg-white text-amber-800 shadow-xs'
                 : 'text-amber-700 hover:text-amber-900'
@@ -121,8 +121,8 @@ export const ContactsTable: React.FC<ContactsTableProps> = ({
         </div>
 
         {/* Search & Export Actions */}
-        <div className="flex items-center gap-2 w-full sm:w-auto">
-          <div className="relative flex-1 sm:w-64">
+        <div className="flex items-center gap-2 w-full sm:w-auto min-w-0">
+          <div className="relative flex-1 sm:w-64 min-w-0">
             <Search className="w-4 h-4 text-slate-400 absolute start-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
@@ -145,9 +145,15 @@ export const ContactsTable: React.FC<ContactsTableProps> = ({
         </div>
       </div>
 
+      {/* Mobile Swipe Hint */}
+      <div className="flex items-center justify-between text-[11px] text-slate-400 sm:hidden px-1">
+        <span>مرّر الجدول أفقياً لمشاهدة كافة الأعمدة</span>
+        <span>عرض {displayedList.length} من {filteredContacts.length}</span>
+      </div>
+
       {/* Table Container */}
-      <div className="overflow-x-auto rounded-xl border border-slate-200/80 bg-white">
-        <table className="w-full text-start text-xs border-collapse">
+      <div className="overflow-x-auto rounded-xl border border-slate-200/80 bg-white max-w-full">
+        <table className="w-full text-start text-xs border-collapse min-w-[620px]">
           <thead>
             <tr className="bg-slate-50/80 text-slate-600 border-b border-slate-200 font-semibold">
               <th className="py-2.5 px-3 text-start w-12">#</th>

@@ -16,7 +16,7 @@ import {
 export const SettingsPage: React.FC = () => {
   const { settings, updateSettings } = useSettings();
 
-  const [pharmacyName, setPharmacyName] = useState(settings.pharmacyName || 'ڤيتا روز فارماسي');
+  const [pharmacyName, setPharmacyName] = useState(settings.pharmacyName || 'صيدليات الفؤاد');
   const [defaultCountryCode, setDefaultCountryCode] = useState(settings.defaultCountryCode || '+20');
   const [apiUrl, setApiUrl] = useState(settings.wapilot.apiUrl || 'https://api.wapilot.net/v2');
   const [instanceId, setInstanceId] = useState(settings.wapilot.instanceId || '');
@@ -29,7 +29,7 @@ export const SettingsPage: React.FC = () => {
 
     // Update centralized reactive settings
     updateSettings({
-      pharmacyName: pharmacyName.trim() || 'صيدلية التجميل والعناية',
+      pharmacyName: pharmacyName.trim() || 'صيدليات الفؤاد',
       defaultCountryCode: defaultCountryCode.trim() || '+20',
       wapilot: {
         ...settings.wapilot,

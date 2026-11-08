@@ -29,7 +29,7 @@ export const WhatsAppPreview: React.FC<WhatsAppPreviewProps> = ({
   recipientCount,
 }) => {
   const { pharmacyName: settingsPharmacyName } = useSettings();
-  const brandName = propPharmacyName || settingsPharmacyName || 'صيدلية التجميل والعناية';
+  const brandName = propPharmacyName || settingsPharmacyName || 'صيدليات الفؤاد';
 
   // Format text to handle simple markdown bold (*text*) and customer name variable substitution
   const renderFormattedText = (text: string) => {
