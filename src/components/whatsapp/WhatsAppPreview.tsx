@@ -10,7 +10,6 @@ import {
   Paperclip,
   Camera,
   Mic,
-  Sparkles,
 } from 'lucide-react';
 import { useSettings } from '../../hooks/useSettings';
 
@@ -104,8 +103,12 @@ export const WhatsAppPreview: React.FC<WhatsAppPreviewProps> = ({
           <div className="bg-[#075E54] text-white px-2.5 sm:px-3 py-2.5 flex items-center justify-between shadow-md select-none">
             <div className="flex items-center gap-2 min-w-0">
               <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 cursor-pointer opacity-80 shrink-0" />
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-700 border border-white/20 flex items-center justify-center text-white font-bold text-xs shadow-sm shrink-0">
-                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-pink-200" />
+              <div className="w-8 h-8 rounded-full bg-white border border-white/40 flex items-center justify-center overflow-hidden shrink-0 shadow-sm p-0.5">
+                <img
+                  src="/logo.png"
+                  alt={brandName}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex flex-col leading-tight min-w-0">
                 <span className="font-semibold text-xs text-white truncate max-w-[120px] sm:max-w-[150px]">

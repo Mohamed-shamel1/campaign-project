@@ -63,13 +63,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSidebar }) => {
           <Menu className="w-5 h-5" />
         </button>
 
-        <div className="min-w-0">
-          <h2 className="text-base sm:text-xl font-bold text-slate-900 tracking-tight truncate">
-            {title}
-          </h2>
-          <p className="text-[11px] sm:text-xs text-slate-500 hidden sm:block truncate mt-0.5">
-            {subtitle}
-          </p>
+        <div className="flex items-center gap-2.5 min-w-0">
+          <div className="h-8 w-12 rounded-lg bg-white border border-slate-200/80 p-0.5 hidden sm:flex items-center justify-center shrink-0 shadow-2xs">
+            <img src="/logo.png" alt="صيدليات الفؤاد" className="h-full w-full object-contain" />
+          </div>
+          <div className="min-w-0">
+            <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight truncate">
+              {title}
+            </h2>
+            <p className="text-[11px] sm:text-xs text-slate-500 hidden sm:block truncate mt-0.5">
+              {subtitle}
+            </p>
+          </div>
         </div>
       </div>
 

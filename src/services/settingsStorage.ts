@@ -3,7 +3,7 @@ import { AppSettings } from '../types';
 const STORAGE_KEY_SETTINGS = 'cosmetics_pharmacy_settings_v1';
 
 const DEFAULT_SETTINGS: AppSettings = {
-  pharmacyName: 'ڤيتا روز فارماسي',
+  pharmacyName: 'صيدليات الفؤاد',
   defaultCountryCode: '+20',
   wapilot: {
     apiUrl: 'https://api.wapilot.net/v2',

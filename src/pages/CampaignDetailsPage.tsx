@@ -206,7 +206,6 @@ export const CampaignDetailsPage: React.FC = () => {
               mediaUrl={campaign.media?.url}
               mediaFileName={campaign.media?.name}
               recipientCount={validRecipients.length}
-              pharmacyName="صيدلية التجميل والعناية"
             />
           </div>
         </div>

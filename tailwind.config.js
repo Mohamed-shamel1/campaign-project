@@ -19,17 +19,22 @@ export default {
       },
       colors: {
         brand: {
-          50: '#fdf2f8',
-          100: '#fce7f3',
-          200: '#fbcfe8',
-          300: '#f9a8d4',
-          400: '#f472b6',
-          500: '#ec4899',
-          600: '#db2777',
-          700: '#be185d',
-          800: '#9d174d',
-          900: '#831843',
-          950: '#500724',
+          50: '#fef2f2',
+          100: '#ffe1e2',
+          200: '#ffc8cb',
+          300: '#ffa1a6',
+          400: '#fa6871',
+          500: '#f23742',
+          600: '#ec1e28', // Official Al Fouad Pharmacies signature red
+          700: '#c8101a',
+          800: '#a51119',
+          900: '#89131a',
+          950: '#0d1114', // Official Al Fouad charcoal black
+        },
+        fouad: {
+          red: '#ec1e28',
+          dark: '#0d1114',
+          gray: '#2b3035',
         },
         whatsapp: {
           light: '#dcf8c6',
@@ -47,4 +52,3 @@ export default {
   },
   plugins: [],
 }
-

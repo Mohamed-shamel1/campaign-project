@@ -55,7 +55,6 @@ export const Step4Preview: React.FC<Step4PreviewProps> = ({
             mediaUrl={media?.url}
             mediaFileName={media?.name}
             recipientCount={validContacts.length}
-            pharmacyName="صيدلية التجميل والعناية"
           />
         </div>
       </div>

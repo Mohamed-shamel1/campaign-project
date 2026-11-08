@@ -5,7 +5,6 @@ import {
   Megaphone,
   PlusCircle,
   Settings,
-  Sparkles,
   Radio,
   ExternalLink,
   X,
@@ -66,17 +65,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         }`}
       >
         {/* Brand Header */}
-        <div className="h-20 px-5 flex items-center justify-between border-b border-slate-100">
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center text-white shadow-sm ring-2 ring-brand-100 shrink-0">
-              <Sparkles className="w-5 h-5 text-pink-200" />
+        <div className="h-22 px-4 py-3 flex items-center justify-between border-b border-slate-100 bg-white">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <div className="h-11 w-16 rounded-xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shadow-xs shrink-0 overflow-hidden">
+              <img
+                src="/logo.png"
+                alt="لوجو صيدليات الفؤاد"
+                className="h-full w-full object-contain"
+              />
             </div>
             <div className="min-w-0">
-              <h1 className="font-bold text-slate-900 text-sm sm:text-base leading-tight tracking-tight truncate">
-                {pharmacyName || 'صيدلية التجميل والعناية'}
+              <h1 className="font-bold text-slate-900 text-sm leading-tight tracking-tight truncate">
+                {pharmacyName || 'صيدليات الفؤاد'}
               </h1>
-              <p className="text-[11px] font-medium text-slate-400 truncate">
-                تسويق واتساب لمستحضرات التجميل
+              <p className="text-[10px] font-bold text-brand-600 truncate uppercase tracking-wider">
+                AL Fouad PHARMACIES
+              </p>
+              <p className="text-[10px] text-slate-400 truncate">
+                تسويق واتساب - قسم التجميل
               </p>
             </div>
           </div>

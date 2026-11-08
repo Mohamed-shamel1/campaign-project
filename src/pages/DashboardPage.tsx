@@ -17,7 +17,6 @@ import {
   Radio,
   ArrowUpLeft,
   ExternalLink,
-  Sparkles,
 } from 'lucide-react';
 
 export const DashboardPage: React.FC = () => {
@@ -38,16 +37,16 @@ export const DashboardPage: React.FC = () => {
   return (
     <div className="space-y-8">
       {/* Welcome Banner */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-brand-900 via-brand-800 to-slate-900 text-white p-6 sm:p-8 shadow-sm">
-        <div className="relative z-10 max-w-2xl space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-medium text-pink-200 border border-white/10">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>نظام التسويق الذكي لصيدليات العناية والتجميل</span>
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-brand-950 to-brand-800 text-white p-5 sm:p-8 shadow-sm">
+        <div className="relative z-10 max-w-2xl space-y-2.5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-rose-200 border border-white/15">
+            <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            <span>صيدليات الفؤاد | AL Fouad Pharmacies - قسم العناية والتجميل</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
-            مرحباً بك في منصة حملات واتساب
+          <h1 className="text-xl sm:text-3xl font-extrabold tracking-tight">
+            مرحباً بك في منصة حملات واتساب - صيدليات الفؤاد
           </h1>
-          <p className="text-sm text-pink-100/80 leading-relaxed">
+          <p className="text-xs sm:text-sm text-rose-100/85 leading-relaxed">
             استورد أرقام عملائك من نظام Odoo، ودقق أرقام الهواتف المصرية بنقرة واحدة، وقم بإنشاء رسائل تسويقية احترافية مع معاينة حية للمستلم.
           </p>
           <div className="pt-2">
@@ -55,8 +54,8 @@ export const DashboardPage: React.FC = () => {
               <Button
                 variant="white"
                 size="md"
-                className="w-full sm:w-auto text-slate-900 hover:text-brand-800 shadow-md font-bold"
-                leftIcon={<Plus className="w-4 h-4 text-brand-700" />}
+                className="w-full sm:w-auto text-slate-900 hover:text-brand-700 shadow-md font-bold"
+                leftIcon={<Plus className="w-4 h-4 text-brand-600" />}
               >
                 بدء حملة تسويقية جديدة الآن
               </Button>
@@ -64,8 +63,10 @@ export const DashboardPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Decorative background circle */}
-        <div className="absolute -end-16 -bottom-24 w-72 h-72 rounded-full bg-brand-600/20 blur-3xl pointer-events-none" />
+        {/* Decorative background logo watermark */}
+        <div className="absolute -end-8 -bottom-12 w-64 h-64 opacity-10 pointer-events-none hidden sm:flex items-center justify-center">
+          <img src="/logo.png" alt="صيدليات الفؤاد" className="w-full h-full object-contain filter invert" />
+        </div>
       </div>
 
       {/* WhatsApp Connection Status Banner */}
